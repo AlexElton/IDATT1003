@@ -12,6 +12,7 @@ class spiller {
         Random random = new Random();
         int randomKast = random.nextInt(6) + 1;
 
+
         System.out.println("Spiller " + id + ":");
 
         if (randomKast == 1) {
