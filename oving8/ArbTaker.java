@@ -1,11 +1,15 @@
 package oving8;
 
+import java.util.ArrayList;
+
 public class ArbTaker {
-    private Person person;
+    private final Person person;
     private final int arbTakerNr;
-    private int ansettelsesAar;
+    private final int ansettelsesAar;
     private double maanedslonn;
     private double skatteprosent;
+    //liste over alle ArbTakere
+    private final static ArrayList<ArbTaker> arbTakere = new ArrayList<ArbTaker>();
 
     public ArbTaker(Person person, int arbtakernr, int ansettelsesAar, double maanedslonn, double skatteprosent) {
         this.person = person;
@@ -13,6 +17,7 @@ public class ArbTaker {
         this.ansettelsesAar = ansettelsesAar;
         this.maanedslonn = maanedslonn;
         this.skatteprosent = skatteprosent;
+        arbTakere.add(this);
     }
 
     public String getNavn() {
@@ -23,6 +28,22 @@ public class ArbTaker {
         java.util.GregorianCalendar kalender = new java.util.GregorianCalendar();
         int aar = kalender.get(java.util.Calendar.YEAR);
         return aar - Integer.parseInt(person.getFodselsAar());
+    }
+
+    //søke etter ansatt og kunne endre informajon om denne
+    public static ArbTaker finnArbTaker(int arbTakerNr) {
+        for (ArbTaker arbTaker : arbTakere) {
+            if (arbTaker.arbTakerNr == arbTakerNr) {
+                return arbTaker;
+            }
+        }
+        return null;
+    }
+
+    //ende informasjon om ansatt
+    public void endreInfo(double maanedslonn, double skatteprosent) {
+        this.maanedslonn = maanedslonn;
+        this.skatteprosent = skatteprosent;
     }
 
 
