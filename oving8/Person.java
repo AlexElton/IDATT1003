@@ -1,9 +1,9 @@
 package oving8;
 
 public final class Person {
-    private String fornavn;
-    private String etternavn;
-    private String fodselsAar;
+    private final String fornavn;
+    private final String etternavn;
+    private final String fodselsAar;
 
     public Person (String fornavn, String etternavn, String fodselsAar) {
         this.fornavn = fornavn;
