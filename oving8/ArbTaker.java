@@ -24,6 +24,23 @@ public class ArbTaker {
         return person.getEtternavn() + ", " + person.getFornavn();
     }
 
+    public int getArbTakerNr() {
+        return arbTakerNr;
+    }
+
+    public int getAnsettelsesAar() {
+        return ansettelsesAar;
+    }
+
+    public double getMaanedslonn() {
+        return maanedslonn;
+    }
+
+    public double getSkatteprosent() {
+        return skatteprosent;
+    }
+
+
     public int alder() {
         java.util.GregorianCalendar kalender = new java.util.GregorianCalendar();
         int aar = kalender.get(java.util.Calendar.YEAR);
