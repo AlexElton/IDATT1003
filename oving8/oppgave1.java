@@ -17,7 +17,7 @@ public class oppgave1 {
         while (true) {
             System.out.println("1: Registrer arb-taker");
             System.out.println("2: Endre info i arb-taker");
-            System.out.println("2: Avslutt");
+            System.out.println("3: Avslutt");
             Scanner in = new Scanner(System.in);
             int valg = in.nextInt();
             switch (valg) {
@@ -45,7 +45,7 @@ public class oppgave1 {
                     }
                     break;
                 case 3:
-                    System.out.println("Avslutt");
+                    System.out.println("Avslutter...");
                     //avslutt program
                     System.exit(0);
                 default:
@@ -76,7 +76,7 @@ public class oppgave1 {
         double skatteprosent = in.nextDouble();
 
         Person person = new Person(fornavn, etternavn, fodselsAar);
-        ArbTaker arbTaker2= new ArbTaker(person, arbTakerNr, ansettelsesAar, maanedslonn, skatteprosent);
+        ArbTaker arbTaker = new ArbTaker(person, arbTakerNr, ansettelsesAar, maanedslonn, skatteprosent);
     }
 
 
