@@ -35,3 +35,23 @@ public class Main {
 //
 //Fields: retter, menyer
 //Methods: registrerRett(), finnRett(), finnRetterAvType(), registrerMeny(), finnMenyerInnenforPrisIntervall(), toString()
+
+//+--------------------+       +---------------------+        +---------------------+
+//|       Rett         |       |        Meny         |        |    MenyRegister      |
+//+--------------------+       +---------------------+        +---------------------+
+//| - navn: String     |       | - retter: List<Rett>|        | - retter: List<Rett> |
+//| - type: String     |       +---------------------+        | - menyer: List<Meny> |
+//| - pris: double     |       | + leggTilRett()     |        +---------------------+
+//| - oppskrift: String|       | + totalPris(): double|       | + registrerRett()    |
+//+--------------------+       | + toString(): String|        | + finnRett()         |
+//| + getNavn()        |       +---------------------+        | + finnRetterAvType()  |
+//| + getType()        |                                        | + registrerMeny()    |
+//| + getPris()        |       * A Meny contains                | + finnMenyerInnenforPrisIntervall() |
+//| + toString()       |       * multiple Rett objects          +---------------------+
+//+--------------------+
+
+//Tools:
+//Lucidchart
+//Microsoft Visio
+//draw.io
+//StarUML

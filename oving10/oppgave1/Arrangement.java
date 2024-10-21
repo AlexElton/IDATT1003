@@ -3,12 +3,12 @@ package oving10.oppgave1;
 import java.util.Objects;
 
 public class Arrangement {
-  private int id;
-  private String name;
-  private String location;
-  private String organizer;
-  private String type;
-  private long time;  // Example: 200210301800 (October 30, 2002 at 18:00)
+  private final int id;
+  private final String name;
+  private final String location;
+  private final String organizer;
+  private final String type;
+  private final long time;
 
   public Arrangement(int id, String name, String location, String organizer, String type, long time) {
     this.id = id;
