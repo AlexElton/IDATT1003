@@ -50,16 +50,4 @@ public class Arrangement {
         ", organizer=" + organizer + ", type=" + type + ", time=" + time + "]";
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Arrangement that = (Arrangement) o;
-    return id == that.id;
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id);
-  }
 }
